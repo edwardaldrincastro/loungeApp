@@ -1,36 +1,34 @@
 import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
-import SkillsDevelopment from "../screens/SkillsDevelopment";
-import SkillDetails from "../screens/SkillDetails";
-import CustomSkills from "../screens/CustomSkills";
 import { MenuIcon, NotificationIcon } from "../utilities/icons/";
+import DummyScreen from "../screens/DummyScreen";
 
-
-export default SkillsStack = createStackNavigator({
-    SkillsDevelopment: SkillsDevelopment,
-    SkillDetails: SkillDetails,
+export default DummyStack = createStackNavigator({
+  DummyStack: DummyScreen,
 },
     {
-        initialRouteName: 'SkillsDevelopment',
+        initialRouteName: 'DummyStack',
         navigationOptions: ({ navigation }) => {
             return {
-                title: 'Yondu Lounge',
+                title: 'Dummy Screen',
                 headerStyle: {
                     backgroundColor: "#FF5A5F",
                     elevation: 0
 
                 },
+                headerTintColor: "#323232",
                 headerLeft: <MenuIcon />,
-                headerRight: <NotificationIcon />,
+                headerRight: <NotificationIcon/>,
                 headerTitleStyle: {
-                    flex: 1,
+                    width: '100%',
+                    marginHorizontal: 0,
                     textAlign: 'center',
-                    fontSize: 16,
+                    fontSize: 15,
                     color: '#fff'
                 },
             }
         }
     }
 
-)
 
+)

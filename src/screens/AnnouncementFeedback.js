@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import Icon from "react-native-vector-icons/Ionicons";
 import Feedback from "../components/Feedback";
-import Blank from "./Blank";
 
-class SendFeedback extends Component {
+class AnnouncementFeedback extends Component {
   constructor(props) {
     super(props);
     this.state = {
     };
   }
   static navigationOptions = {
-    drawerLabel: <Blank/>
-  }
+    header:null
+}
 
   render() {
+    let name = this.props.navigation.getParam("itemPassed", "no name")
     return (
-      <Feedback />
+      <Feedback subject={name}/>
     );
   }
 }
 
-export default SendFeedback;
+export default AnnouncementFeedback;
