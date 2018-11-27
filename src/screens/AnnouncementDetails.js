@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { BackIcon, UserIcon, EyeIcon } from "../utilities/icons/";
 import CustomButton from "../components/Button";
 
@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     titleContainer: {
         flex: 1,
         justifyContent: 'center',
-        // backgroundColor: "#1E1E1E",
     },
     announcementTitle: {
         fontSize: 24,
@@ -81,7 +80,6 @@ const styles = StyleSheet.create({
     },
     descriptionContainer: {
         flex: 2,
-        // backgroundColor: "#DCDCAA",
         maxHeight: 90,
         justifyContent: 'center'
     },
@@ -92,7 +90,6 @@ const styles = StyleSheet.create({
     }, 
     distributionContainer: {
         flex: 2,
-        // backgroundColor: "#DCDCAA",
         maxHeight: 90,
     },
     distributionText: {
@@ -104,19 +101,13 @@ const styles = StyleSheet.create({
         color: "#8d8d8d",
         fontWeight: 'bold'
     },
-    textColored: {
-        // color: "#FF5A5F"
-    },
     detailsContainer: {
         flex: 1,
         flexDirection: 'row',
-        // alignItems: 'center',
-        // backgroundColor: "#838338",
         maxHeight: 50
     },
     locationContainer: {
         flex: 2,
-        // backgroundColor: "#9CDCDA",
         justifyContent: 'space-around'
     },
     detailsText: {
@@ -128,13 +119,11 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        // justifyContent: 'space-around',
     },
     postedByContainer: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        // justifyContent: 'space-around',
     },
     announcementDetails: {
         fontSize: 16,
@@ -143,7 +132,6 @@ const styles = StyleSheet.create({
     },
     contactContainer: {
         flex: 0.5,
-        // backgroundColor: "#18A05E"
     },
     buttonContainer: {
         flex: 2,

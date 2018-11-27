@@ -5,20 +5,6 @@ import AnnouncementDetails from "../screens/AnnouncementDetails";
 import { MenuIcon, NotificationIcon } from "../utilities/icons/";
 import AnnouncementFeedback from "../screens/AnnouncementFeedback";
 
-// class AnnouncementsStack extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//         };
-//     }
-
-//     render() {
-//         console.log("announcestack",this.props.navigation.state)
-//         return (
-//             <AnnouncementsStackNav/>
-//         );
-//     }
-// }
 export default AnnouncementStack = createStackNavigator({
     Announcements: Announcements,
     AnnouncementDetails: AnnouncementDetails,

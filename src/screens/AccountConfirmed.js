@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { ScrollView, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, } from 'react-native';
 import LocalImage from "../components/LocalImage";
 import Button from '../components/Button';
-import InputText from '../components/InputText';
 
 class AccountConfirmed extends Component {
   constructor(props) {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, Picker } from 'react-native';
-import Icon from "react-native-vector-icons/Ionicons";
 import CustomButton from '../components/Button';
 import { MenuIcon, NotificationIcon } from "../utilities/icons";
 
@@ -18,23 +17,23 @@ class Feedback extends Component {
         } else {
             subject = (
                 <View style={styles.topicContainer}><Picker
-                selectedValue={this.state.language}
-                style={{
-                    height: 50, width: "100%", marginVertical: 10,
-                }}
-                itemStyle={{ fontWeight: 'bold', }}
-                onValueChange={(itemValue, itemIndex) => this.setState({ language: itemValue })}>
-                <Picker.Item label="Select Subject" value="java" />
-                <Picker.Item label="Company Policy" value="js" />
-            </Picker>
+                    selectedValue={this.state.language}
+                    style={{
+                        height: 50, width: "100%", marginVertical: 10,
+                    }}
+                    itemStyle={{ fontWeight: 'bold', }}
+                    onValueChange={(itemValue, itemIndex) => this.setState({ language: itemValue })}>
+                    <Picker.Item label="Select Subject" value="java" />
+                    <Picker.Item label="Company Policy" value="js" />
+                </Picker>
                 </View>)
         }
         return (
             <View style={{ flex: 1 }}>
 
-                <View style={{ height: 56, backgroundColor: "#FF5A5F", flexDirection: 'row', alignItems: 'center' }}>
+                <View style={styles.headerContainer}>
                     <MenuIcon />
-                    <Text style={{fontSize: 16, color:"#fff", fontWeight: 'bold'}}>Yondu Lounge</Text>
+                    <Text style={styles.headerTitle}>Yondu Lounge</Text>
                     <NotificationIcon />
                 </View>
                 <View style={styles.container}>
@@ -51,15 +50,7 @@ class Feedback extends Component {
                             placeholder="Enter Feedback"
                             placeholderTextColor="#8d8d8d"
                             multiline={true}
-                            style={{
-                                flex: 1,
-                                backgroundColor: '#F7F7F7',
-                                textAlignVertical: "top",
-                                fontSize: 16,
-                                fontWeight: 'bold',
-                                marginLeft: 3,
-                                color: '#8d8d8d'
-                            }} />
+                            style={styles.inputFieldText} />
                     </View>
                     <View style={styles.buttonContainer}>
                         <CustomButton pink text="Submit" destination="submit" />
@@ -76,6 +67,17 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         paddingHorizontal: 15,
+    },
+    headerContainer: {
+        height: 56,
+        backgroundColor: "#FF5A5F",
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    headerTitle: {
+        fontSize: 16,
+        color: "#fff",
+        fontWeight: 'bold'
     },
     titleContainer: {
         flex: 0.5,
@@ -100,6 +102,15 @@ const styles = StyleSheet.create({
     inputFieldContainter: {
         flex: 4.4,
         backgroundColor: '#F7F7F7',
+    },
+    inputFieldText: {
+        flex: 1,
+        backgroundColor: '#F7F7F7',
+        textAlignVertical: "top",
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginLeft: 3,
+        color: '#8d8d8d'
     },
     buttonContainer: {
         flex: 1,

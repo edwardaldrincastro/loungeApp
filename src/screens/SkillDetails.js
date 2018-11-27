@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { BackIcon } from "../utilities/icons/";
 import CustomButton from "../components/Button";
 
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
   },
   descriptionContainer: {
     flex: 2,
-    // backgroundColor: "#DCDCAA",
     maxHeight: 90
   },
   skillDescription: {
@@ -85,26 +84,20 @@ const styles = StyleSheet.create({
   contactTitle: {
     fontSize: 18
   },
-  textColored: {
-    // color: "#FF5A5F"
-  },
   detailsContainer: {
     flex: 2,
-    justifyContent: 'center',
   },
   skillDetails: {
     fontSize: 18
   },
   aboutContainer: {
     flex: 1,
-    // backgroundColor: "#E61A5F"
   },
   about: {
     fontSize: 18
   },
   contactContainer: {
     flex: 1,
-    // backgroundColor: "#18A05E"
     marginTop: 15
   },
   buttonContainer: {

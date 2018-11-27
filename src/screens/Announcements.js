@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { announcements } from "../utilities/data/data_samples";
-import { MenuIcon, NotificationIcon, UserIcon, EyeIcon } from "../utilities/icons";
-import CustomSkills from "./CustomSkills";
-import SkillsStack from "../components/SkillsStack";
-import StackHolder from "../components/StackHolder";
+import { UserIcon, EyeIcon } from "../utilities/icons";
 
 class Announcements extends Component {
     constructor(props) {
         super(props);
         this.state = {
         };
-    }
-    static navigationOptions = {
-        // header: null
     }
 
     render() {
@@ -59,10 +53,7 @@ class Announcements extends Component {
                                         numberOfLines={3}
                                         style={styles.announcementDescription}>{item.description}</Text>
                                 </View>
-                                <View style={{
-                                    width: "100%", height: 1, backgroundColor: '#e1e1e1',
-                                    marginVertical: 15
-                                }} />
+                                <View style={styles.hr} />
                             </View>
                         </TouchableOpacity>
                     ))}
@@ -87,6 +78,12 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 20,
         fontWeight: 'bold'
+    },
+    hr: {
+        width: "100%",
+        height: 1,
+        backgroundColor: '#e1e1e1',
+        marginVertical: 15
     },
     detailsContainer: {
         flex: 1,

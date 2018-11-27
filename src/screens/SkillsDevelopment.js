@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { skills_development } from "../utilities/data/data_samples";
-import { MenuIcon, NotificationIcon } from "../utilities/icons";
-import CustomSkills from "./CustomSkills";
-import SkillsStack from "../components/SkillsStack";
-import StackHolder from "../components/StackHolder";
-
 class SkillsDevelopment extends Component {
     constructor(props) {
         super(props);
@@ -15,33 +10,25 @@ class SkillsDevelopment extends Component {
 
     render() {
         return (
-            <ScrollView style={{backgroundColor: '#fff'}}>
+            <ScrollView style={{ backgroundColor: '#fff' }}>
                 <View style={styles.container}>
                     <View style={styles.titleContainer}>
-                    <Text style={styles.titleText}>Skills Development</Text>
+                        <Text style={styles.titleText}>Skills Development</Text>
                     </View>
                     {skills_development.map((item, index) => (
-                        <TouchableOpacity 
-                        key={index}
-                        onPress={() => this.props.navigation.navigate('SkillDetails',
-                            {
-                                //     name: this.props.name,
-                                //     description: this.props.description,
-                                //     when: this.props.when,
-                                //     where: this.props.where,
-                                //     who: this.props.who,
-                                //     remainingSlot: this.props.remainingSlot,
-                                //     about: this.props.about,
-                                //     contact: this.props.contact
-                                name: item.name,
-                                description: item.description,
-                                when: item.when,
-                                where: item.where,
-                                who: item.who,
-                                remainingSlot: item.remainingSlot,
-                                about: item.about,
-                                contact: item.contact
-                            })}>
+                        <TouchableOpacity
+                            key={index}
+                            onPress={() => this.props.navigation.navigate('SkillDetails',
+                                {
+                                    name: item.name,
+                                    description: item.description,
+                                    when: item.when,
+                                    where: item.where,
+                                    who: item.who,
+                                    remainingSlot: item.remainingSlot,
+                                    about: item.about,
+                                    contact: item.contact
+                                })}>
                             <View style={styles.skillContainer}>
                                 <View style={styles.skillTitleContainer}>
                                     <Text
@@ -52,41 +39,12 @@ class SkillsDevelopment extends Component {
                                         numberOfLines={3}
                                         style={styles.skillDescription}>{item.description}</Text>
                                 </View>
-                                <View style={{
-                                    width: "100%", height: 1, backgroundColor: '#e1e1e1',
-                                    marginVertical: 15
-                                }} />
+                                <View style={styles.hr} />
                             </View>
                         </TouchableOpacity>
                     ))}
                 </View>
             </ScrollView>
-
-            // <View>
-            //     <View style={{ height: 56, width: "100%", backgroundColor: "#FF5A5F", flexDirection: 'row', alignItems: 'center' }}>
-            //         <MenuIcon />
-            //         <Text style={{ color: '#fff', fontWeight: 'bold', fontSize: 16 }}>Yondu Lounge</Text>
-            //         <NotificationIcon />
-            //     </View>
-            //     <View style={{ flex: 1 }}>
-
-            //         {skills_development.map((item, index) => (
-            //             <StackHolder
-            //                 name={item.name}
-            //                 description={item.description}
-            //                 when={item.when}
-            //                 where={item.where}
-            //                 who={item.who}
-            //                 remainingSlot={item.remainingSlot}
-            //                 about={item.about}
-            //                 contact={item.contact}
-            //                 key={index} />
-
-            //         ))}
-            //     </View>
-            // </View>
-
-
         )
     }
 }
@@ -101,6 +59,12 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: 20,
         paddingVertical: 10
+    },
+    hr: {
+        width: "100%",
+        height: 1,
+        backgroundColor: '#e1e1e1',
+        marginVertical: 15
     },
     titleText: {
         fontSize: 18,
@@ -127,25 +91,3 @@ const styles = StyleSheet.create({
 })
 
 export default SkillsDevelopment;
-
-{/* <ScrollView>
-<View style={styles.container}>
-    <View style={styles.titleContainer}>
-        <Text style={styles.titleText}>Skills Development </Text>
-    </View>
-    {skills_development.map((item, index) => (
-        <SkillsStack
-            name={item.name}
-            description={item.description}
-            when={item.when}
-            where={item.where}
-            who={item.who}
-            remainingSlot={item.remainingSlot}
-            about={item.about}
-            contact={item.contact}
-            key={index}
-        />
-    ))}
-
-</View>
-</ScrollView > */}

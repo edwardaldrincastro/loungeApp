@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { EyeIcon, EyeOffIcon } from "../utilities/icons/";
 
 class InputText extends Component {
@@ -16,31 +15,23 @@ class InputText extends Component {
         })
     }
     eyeHandler = () => {
-        let eyeOn = (<EyeIcon />)
-        let eyeOff = (<EyeOffIcon />)
-        // if (this.props.showEye) {
         if (this.props.showEye) {
             if (this.state.showPass) {
                 return (
-                    // <View style={{ marginRight: 15 }}>
                     <TouchableOpacity onPress={() => this.showPasswordHandler()}>
                         <EyeIcon />
                     </TouchableOpacity>
-                    // </View>
                 )
             } else {
                 return (
-                    // <View style={{ marginRight: 15 }}>
                     <TouchableOpacity onPress={() => this.showPasswordHandler()}>
                         <EyeOffIcon />
                     </TouchableOpacity>
-                    // </View>
                 )
             }
         } else {
             return null
         }
-        // )
     }
 
     render() {
@@ -52,8 +43,8 @@ class InputText extends Component {
                     onChangeText={this.props.onChangeText}
                     secureTextEntry={this.state.showPass}
                     value={this.props.value} />
+                    
                 {this.eyeHandler()}
-                {/* <EyeIcon/> */}
             </View>
         );
     }

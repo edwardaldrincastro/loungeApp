@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions  } from 'react-native';
+import { Image, Dimensions  } from 'react-native';
 
 const LocalImage = ({source, originalWidth, originalHeight, logoType}) => {
     let windowWidth = Dimensions.get("window").width/1.5

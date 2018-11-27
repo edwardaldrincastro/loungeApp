@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
 import SkillsDevelopment from "../screens/SkillsDevelopment";
 import SkillDetails from "../screens/SkillDetails";
-import CustomSkills from "../screens/CustomSkills";
 import { MenuIcon, NotificationIcon } from "../utilities/icons/";
 
 
@@ -12,7 +11,7 @@ export default SkillsStack = createStackNavigator({
 },
     {
         initialRouteName: 'SkillsDevelopment',
-        navigationOptions: ({ navigation }) => {
+        navigationOptions: () => {
             return {
                 title: 'Yondu Lounge',
                 headerStyle: {

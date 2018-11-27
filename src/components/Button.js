@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import { announcements } from '../utilities/data/data_samples';
 
 class Button extends Component {
     constructor(props) {

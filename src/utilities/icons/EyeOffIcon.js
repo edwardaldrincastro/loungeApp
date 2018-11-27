@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, } from 'react-native';
 import Icon from "react-native-vector-icons/Ionicons";
-import { withNavigation, DrawerActions } from 'react-navigation';
+import { withNavigation } from 'react-navigation';
 
 
 class EyeOffIcon extends Component {
