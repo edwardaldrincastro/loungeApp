@@ -13,7 +13,7 @@ class NotificationIcon extends Component {
         }
         return (
 
-            <View style={styles.icon}>
+            <View style={styles.iconContainer}>
                 {icon}
             </View>
         )
